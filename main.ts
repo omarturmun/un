@@ -10,7 +10,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 function limpiaparabrisas () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+    pins.servoWritePin(AnalogPin.P0, randint(0, 180))
 }
 function eskerreko_intermitentea () {
     music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
@@ -85,7 +85,6 @@ basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         radio.sendNumber(1)
     }
-    // 
     if (input.buttonIsPressed(Button.B)) {
         radio.sendNumber(2)
     }
