@@ -13,6 +13,7 @@ function limpiaparabrisas () {
     pins.servoWritePin(AnalogPin.P0, 180)
 }
 function eskerreko_intermitentea () {
+    music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
     basic.showLeds(`
         # # . . .
         # # . . .
@@ -46,6 +47,7 @@ function eskerreko_intermitentea () {
         `)
 }
 function eskuineko_intermitentea () {
+    music.startMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once)
     basic.showLeds(`
         . . . # #
         . . . # #
